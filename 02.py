@@ -21,9 +21,6 @@ class Stack:
         self.topo = self.topo.next
         self._size = self._size - 1
         return removed.data
-    
-    def __len__(self):
-        return self._size
 
     def isEmpty(self):
         if(self._size > 0):
@@ -47,4 +44,6 @@ class Stack:
 
 pilha = Stack()
 
-print(pilha.validar_expressao("(A+B)("))
+expressao = input("EXPRESSÃO: ")
+
+print(pilha.validar_expressao(expressao))
